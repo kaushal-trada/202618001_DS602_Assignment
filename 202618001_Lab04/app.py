@@ -1,5 +1,8 @@
-import streamlit as st
+import os
+from pathlib import Path
 import pandas as pd
+import streamlit as st
+
 from src.eda import (
     get_summary_table,
     plot_simple_distribution,
@@ -14,18 +17,22 @@ from src.modeling import (
     get_model_diagnostics
 )
 
-st.set_page_config(page_title="Medical Insurance Statistics & Dashboard", layout="wide")
+# --- DATA LOADING & PATH RESOLUTION ---
+BASE_DIR = Path(__file__).resolve().parent
+LOCAL_DATA_PATH = BASE_DIR / "data" / "insurance.csv"
+REMOTE_DATA_URL = "https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/insurance.csv"
 
-# --- DATA INGESTION ---
 @st.cache_data
 def load_data():
-    return pd.read_csv("data/insurance.csv")
+    if LOCAL_DATA_PATH.exists():
+        return pd.read_csv(LOCAL_DATA_PATH)
+    try:
+        return pd.read_csv(REMOTE_DATA_URL)
+    except Exception as err:
+        st.error(f"Failed to load dataset from local path and remote fallback: {err}")
+        st.stop()
 
-try:
-    df = load_data()
-except Exception as e:
-    st.error(f"Could not load data/insurance.csv: {e}")
-    st.stop()
+df = load_data()
 
 # --- GLOBAL SIDEBAR FILTERS ---
 st.sidebar.header("Filter Dataset")

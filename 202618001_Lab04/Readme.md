@@ -137,3 +137,9 @@ The Streamlit web application is divided into three functional tabs:
 └── .gitignore                 # Standard Python/IDE ignore entries
 
 
+👤 Author
+Name: [Your Name]
+
+Course: Statistical Analysis for Data Science
+
+GitHub: @your-username

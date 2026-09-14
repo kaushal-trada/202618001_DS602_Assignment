@@ -521,6 +521,8 @@ The primary objectives of this project are:
 ## 👤 Author
 
 **Name:** Kaushal Trada  
+**ID:** 202618001
+
 **Course:** Statistical Analysis for Data Science  
 **GitHub:** [@kaushal-trada](https://github.com/kaushal-trada)
 

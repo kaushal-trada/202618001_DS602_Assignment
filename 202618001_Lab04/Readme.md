@@ -145,14 +145,16 @@ The regression model can be represented as:
 
 $$
 \begin{aligned}
-\text{charges} = \beta_0
-&+ \beta_1(\text{age})
-+ \beta_2(\text{bmi}) \\
-&+ \beta_3(\text{children})
-+ \beta_4(\text{smoker}\_\text{yes})
-+ \varepsilon
+\text{charges} = \beta_0 
+  &+ \beta_1(\text{age}) \\
+  &+ \beta_2(\text{bmi}) \\
+  &+ \beta_3(\text{children}) \\
+  &+ \beta_4(\text{smoker}\_\text{yes}) \\
+  &+ \varepsilon
 \end{aligned}
-$$ 
+$$
+
+Where:
 Where:
 
 - $\beta_0$ = Intercept
@@ -174,7 +176,7 @@ The model explains approximately **75% of the variation in medical charges**, in
 
 #### Smoking Status
 
-$\beta_{\text{age}} \approx +256$ vs $\beta_{\text{smoker\_yes}} \approx +23,848$
+$$\text{\$\beta\_\{\text\{smoker\_yes\}\} \approx +23,848\$}$$
 
 with:
 

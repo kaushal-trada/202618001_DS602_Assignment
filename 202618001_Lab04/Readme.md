@@ -149,11 +149,10 @@ $$
 &+ \beta_1(\text{age})
 + \beta_2(\text{bmi}) \\
 &+ \beta_3(\text{children})
-+ \beta_4(\text{smoker\_yes})
++ \beta_4(\text{smoker}\_\text{yes})
 + \varepsilon
 \end{aligned}
-$$
-
+$$ 
 Where:
 
 - $\beta_0$ = Intercept
@@ -175,9 +174,7 @@ The model explains approximately **75% of the variation in medical charges**, in
 
 #### Smoking Status
 
-$$
-\beta_{\text{smoker\_yes}} \approx +23,848
-$$
+$\beta_{\text{age}} \approx +256$ vs $\beta_{\text{smoker\_yes}} \approx +23,848$
 
 with:
 

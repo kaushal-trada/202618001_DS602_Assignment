@@ -176,7 +176,7 @@ The model explains approximately **75% of the variation in medical charges**, in
 
 #### Smoking Status
 
-$$\text{\$\beta\_\{\text\{smoker\_yes\}\} \approx +23,848\$}$$
+$\beta_{\text{smoker}\_\text{yes}} \approx +23,848$
 
 with:
 
